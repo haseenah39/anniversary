@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no">
+
+<title>Rizwan ❤️ Haseena — Our Story</title>
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090306;
+    color:white;
+    font-family:Georgia,"Times New Roman",serif;
+    overflow-x:hidden;
+}
+
+
+/* ================= SECTION ================= */
+
+section{
+    min-height:100svh;
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:
+        55px 20px
+        calc(65px + env(safe-area-inset-bottom));
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* ================= TEXT ================= */
+
+h1{
+    font-size:clamp(45px,13vw,82px);
+    line-height:1.05;
+    margin:18px 0;
+}
+
+h2{
+    font-size:clamp(31px,9vw,50px);
+    line-height:1.12;
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+p{
+    width:100%;
+    max-width:700px;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.subtitle{
+    color:#ffc5d5;
+    font-style:italic;
+}
+
+
+/* ================= BUTTON ================= */
+
+button{
+    appearance:none;
+    border:0;
+
+    min-height:52px;
+
+    padding:15px 25px;
+
+    margin-top:27px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3f78,
+            #ff7198
+        );
+
+    color:white;
+
+    font-family:Georgia,serif;
+    font-size:16px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(255,71,126,.35);
+
+    transition:
+        transform .2s ease;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+
+/* ================= HEART ================= */
+
+.main-heart{
+    font-size:76px;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,65,120,.8)
+        );
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.17);
+    }
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts{
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.floating-heart{
+    position:absolute;
+    bottom:-40px;
+
+    opacity:0;
+
+    animation:
+        floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:
+            translateY(0)
+            rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.65;
+    }
+
+    80%{
+        opacity:.45;
+    }
+
+    100%{
+        transform:
+            translateY(-110svh)
+            rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            #792341 0%,
+            #3b1021 38%,
+            #13050a 78%
+        );
+}
+
+.hero p{
+    margin-top:4px;
+}
+
+
+/* ================= SURPRISE ================= */
+
+.surprise{
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #70213e,
+            #2c0a18 48%,
+            #100408 85%
+        );
+}
+
+.envelope{
+    font-size:65px;
+
+    animation:
+        envelope 2s infinite;
+}
+
+@keyframes envelope{
+
+    0%,100%{
+        transform:rotate(0);
+    }
+
+    25%{
+        transform:rotate(-7deg);
+    }
+
+    75%{
+        transform:rotate(7deg);
+    }
+}
+
+
+/* ================= PAPER ================= */
+
+.note{
+
+    width:100%;
+    max-width:600px;
+
+    padding:32px 21px;
+
+    background:#fffaf1;
+
+    color:#3b2027;
+
+    border-radius:7px;
+
+    transform:rotate(-1deg);
+
+    box-shadow:
+        0 20px 55px #0009;
+}
+
+.note h3{
+    color:#a51f4e;
+}
+
+.note p{
+    color:#3b2027;
+}
+
+.terms{
+
+    text-align:left;
+
+    margin-top:22px;
+
+    padding-top:18px;
+
+    border-top:
+        1px dashed #9b6874;
+}
+
+.terms strong{
+    color:#a51f4e;
+}
+
+
+/* ================= EMOTIONAL ================= */
+
+.emotional{
+
+    background:
+        radial-gradient(
+            circle at center,
+            #681b37 0%,
+            #260813 52%,
+            #090306 100%
+        );
+}
+
+.quote-box{
+
+    width:100%;
+    max-width:680px;
+
+    padding:28px 21px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border-left:
+        3px solid #ff5d87;
+
+    border-right:
+        3px solid #ff5d87;
+
+    border-radius:14px;
+}
+
+.quote{
+
+    font-size:
+        clamp(22px,6.5vw,36px);
+
+    line-height:1.55;
+
+    font-style:italic;
+
+    color:#ffe1e9;
+
+    margin-bottom:20px;
+}
+
+
+/* ================= STORY ================= */
+
+.story{
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #491126,
+            #16060c 72%
+        );
+}
+
+.timeline{
+
+    width:100%;
+    max-width:700px;
+
+    position:relative;
+
+    margin-top:12px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    left:14px;
+
+    width:2px;
+
+    background:
+        linear-gradient(
+            #ff477e,
+            #ffabc0,
+            #ff477e
+        );
+
+    opacity:.55;
+}
+
+.timeline-card{
+
+    width:
+        calc(100% - 37px);
+
+    margin:
+        13px 0
+        13px 37px;
+
+    padding:
+        21px 18px;
+
+    text-align:left;
+
+    border-radius:21px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    backdrop-filter:
+        blur(8px);
+
+    position:relative;
+}
+
+.timeline-card::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    left:-32px;
+
+    top:21px;
+
+    font-size:14px;
+}
+
+.year{
+
+    color:#ff7097;
+
+    font-size:29px;
+
+    font-weight:bold;
+
+    margin-bottom:7px;
+}
+
+.timeline-card p{
+    font-size:16px;
+}
+
+
+/* ================= LITTLE THINGS ================= */
+
+.little{
+
+    background:#100408;
+}
+
+.reasons{
+
+    width:100%;
+    max-width:650px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:11px;
+
+    margin-top:18px;
+}
+
+.reason{
+
+    min-height:75px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:15px 8px;
+
+    border-radius:18px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    font-size:15px;
+}
+
+.reason:active{
+    transform:scale(.96);
+}
+
+
+/* ================= APOLOGY ================= */
+
+.apology{
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            #58172f,
+            #1b060d 65%,
+            #090306
+        );
+}
+
+.card{
+
+    width:100%;
+    max-width:680px;
+
+    padding:
+        27px 20px;
+
+    margin:
+        13px 0;
+
+    border-radius:24px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    backdrop-filter:
+        blur(9px);
+
+    box-shadow:
+        0 12px 40px #0004;
+}
+
+.card p{
+    margin:8px auto;
+}
+
+.card h2{
+    margin-bottom:12px;
+}
+
+
+/* ================= NEW LOVE LETTER ================= */
+
+.love-letter{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,71,126,.15),
+            rgba(255,255,255,.05)
+        );
+
+    border:
+        1px solid
+        rgba(255,130,160,.28);
+
+    box-shadow:
+        0 20px 60px
+        rgba(255,50,110,.14);
+}
+
+.roles{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#ffd8e2;
+
+    margin-top:18px;
+}
+
+.love-highlight{
+
+    color:#ff91ad;
+
+    font-size:
+        clamp(22px,6vw,34px);
+
+    line-height:1.5;
+
+    margin-top:20px;
+}
+
+
+/* ================= FINAL ================= */
+
+.final{
+
+    background:
+        radial-gradient(
+            circle at center,
+            #761e41 0%,
+            #2b0918 48%,
+            #080205 100%
+        );
+}
+
+.big{
+
+    width:100%;
+    max-width:760px;
+
+    font-size:
+        clamp(24px,7vw,43px);
+
+    line-height:1.48;
+
+    margin:10px auto;
+}
+
+.highlight{
+    color:#ff91ad;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,100,140,.25);
+}
+
+.signature{
+
+    margin-top:30px;
+
+    font-size:21px;
+
+    line-height:1.7;
+
+    color:#ff9bb5;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-height:700px){
+
+    section{
+        padding-top:40px;
+        padding-bottom:50px;
+    }
+
+    .main-heart{
+        font-size:60px;
+    }
+
+    h1{
+        font-size:44px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.65;
+    }
+
+    button{
+        margin-top:20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     1 — OPENING
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hearts"></div>
+
+    <div class="main-heart">
+        ❤️
+    </div>
+
+    <p class="subtitle">
+        A story that took its own sweet time…
+    </p>
+
+    <h1>
+        Rizwan<br>
+        <span style="color:#ff8cab;">&</span>
+        Haseena
+    </h1>
+
+    <p>
+        Our story wasn't planned perfectly.
+    </p>
+
+    <p>
+        It just happened…
+        and somehow became
+        my favourite story.
+    </p>
+
+    <button onclick="nextSection()">
+        Start Our Story ✨
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     2 — OCT 2 SURPRISE
+===================================================== -->
+
+<section class="surprise">
+
+    <div class="hearts"></div>
+
+    <div class="envelope">
+        💌
+    </div>
+
+    <h2>
+        Oct 2 Morning 😂
+    </h2>
+
+    <p class="subtitle">
+        A small surprise for you…
+    </p>
+
+    <div class="note">
+
+        <h3>
+            Congratulations Rizwan! 🎉
+        </h3>
+
+        <br>
+
+        <p>
+            You have successfully completed
+            another year with the girl who said
+            <b>NO in 2021.</b> 😂❤️
+        </p>
+
+        <div class="terms">
+
+            <p>
+                <strong>
+                    Terms & Conditions:
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                You cannot return me. 😂<br><br>
+
+                You cannot exchange me. 😂<br><br>
+
+                Lifetime warranty only. 😌❤️
+            </p>
+
+        </div>
+
+    </div>
+
+    <button onclick="nextSection()">
+        Okay… now the emotional part 🥹
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     3 — EMOTIONAL
+===================================================== -->
+
+<section class="emotional">
+
+    <div class="main-heart">
+        🥹
+    </div>
+
+    <h2>
+        The Emotional Part
+    </h2>
+
+    <div class="quote-box">
+
+        <p class="quote">
+            “The funniest thing about our story
+            is that we don't even know
+            when we fell in love.”
+        </p>
+
+        <p>
+            There wasn't one particular day.
+            Maybe it happened slowly…
+            through conversations,
+            little moments,
+            laughter,
+            arguments,
+            and everything in between.
+        </p>
+
+        <br>
+
+        <p>
+            Maybe we didn't notice it happening.
+            Maybe love simply grew quietly
+            while we were busy living our lives.
+        </p>
+
+    </div>
+
+    <button onclick="nextSection()">
+        Our journey ❤️
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     4 — OUR JOURNEY
+===================================================== -->
+
+<section class="story">
+
+    <h2>
+        Our Journey ❤️
+    </h2>
+
+    <p>
+        From 2018 to 2026…
+        look how far we've come.
+    </p>
+
+    <div class="timeline">
+
+
+        <div class="timeline-card">
+
+            <div class="year">
+                2018
+            </div>
+
+            <p>
+                <b>We met.</b>
+            </p>
+
+            <p>
+                Two people met without knowing
+                how important they would eventually
+                become to each other.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="year">
+                2021
+            </div>
+
+            <p>
+                <b>
+                    You asked.
+                    I said NO. 😂
+                </b>
+            </p>
+
+            <p>
+                Yes…
+                that actually happened.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="year">
+                2024
+            </div>
+
+            <p>
+                <b>
+                    Somehow,
+                    I was the one asking you. ❤️
+                </b>
+            </p>
+
+            <p>
+                Funny how life can completely
+                turn a story around.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="year">
+                2025
+            </div>
+
+            <p>
+                <b>
+                    We finally chose each other. ❤️
+                </b>
+            </p>
+
+            <p>
+                Not because everything was perfect,
+                but because we wanted each other.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="year">
+                2026
+            </div>
+
+            <p>
+                <b>
+                    And here we are… ❤️
+                </b>
+            </p>
+
+            <p>
+                Another year.
+                Another chapter.
+                Still us.
+            </p>
+
+        </div>
+
+    </div>
+
+    <button onclick="nextSection()">
+        Our little things 🫶🏻
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     5 — LITTLE THINGS
+===================================================== -->
+
+<section class="little">
+
+    <h2>
+        Our Little Things 🥹
+    </h2>
+
+    <p>
+        Maybe these things seem small…
+        but these are the things
+        that make our story ours.
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason">
+            Your smile ❤️
+        </div>
+
+        <div class="reason">
+            Your silly moments 😂
+        </div>
+
+        <div class="reason">
+            The way you care 🫶🏻
+        </div>
+
+        <div class="reason">
+            The little things you do 💕
+        </div>
+
+        <div class="reason">
+            Our fights & making up 🥺
+        </div>
+
+        <div class="reason">
+            Our random conversations 🌙
+        </div>
+
+        <div class="reason">
+            The memories we've made ❤️
+        </div>
+
+        <div class="reason">
+            Just… YOU ❤️
+        </div>
+
+    </div>
+
+    <button onclick="nextSection()">
+        One last thing… 💌
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     6 — SORRY + THANK YOU
+===================================================== -->
+
+<section class="apology">
+
+    <h2>
+        Rizwan… Mama… ❤️
+    </h2>
+
+    <p class="big">
+        Before this little story ends,
+        there are two things I really
+        want to tell you.
+    </p>
+
+
+    <!-- SORRY -->
+
+    <div class="card">
+
+        <h2>
+            I'm Sorry 🥺
+        </h2>
+
+        <p>
+            Sorry for everything.
+        </p>
+
+        <p>
+            For every time I hurt you,
+            for every unnecessary fight,
+            for the words I didn't mean,
+            and for every moment I could
+            have handled better.
+        </p>
+
+        <p>
+            I know I'm not perfect.
+            But I'm learning.
+            And I'm trying.
+        </p>
+
+    </div>
+
+
+    <!-- THANK YOU -->
+
+    <div class="card">
+
+        <h2>
+            Thank You 🫶🏻
+        </h2>
+
+        <p>
+            Thank you for staying.
+        </p>
+
+        <p>
+            Thank you for understanding me.<br>
+            Thank you for your patience.<br>
+            Thank you for every little thing you do.<br>
+            Thank you for every memory.<br>
+            Thank you for being there.
+        </p>
+
+        <p>
+            <b>
+                Thank you for choosing us. ❤️
+            </b>
+        </p>
+
+    </div>
+
+
+    <button onclick="nextSection()">
+        There's something more I want to tell you ❤️
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     7 — YOU ARE MY EVERYTHING
+===================================================== -->
+
+<section class="emotional">
+
+    <div class="main-heart">
+        ❤️
+    </div>
+
+    <h2>
+        You Are My Everything
+    </h2>
+
+    <div class="card love-letter">
+
+        <p class="big">
+            Without you,
+            I feel like I'm nothing.
+        </p>
+
+        <p>
+            I don't know how I would handle
+            this world without you beside me.
+        </p>
+
+        <br>
+
+        <p>
+            You are the person I look for
+            when I'm happy,
+            when I'm sad,
+            when I'm angry,
+            and when I simply need someone.
+        </p>
+
+        <br>
+
+        <p>
+            You are not just one person
+            in my life.
+            Somehow, you became
+            so many things to me.
+        </p>
+
+
+        <p class="roles">
+
+            My friend. ❤️<br>
+
+            My best friend. ❤️<br>
+
+            My closest friend. ❤️<br>
+
+            My one and only. ❤️<br>
+
+            My boyfriend. ❤️<br>
+
+            My lover. ❤️<br>
+
+            And now…<br>
+
+            <b>
+                My husband. 🥹❤️
+            </b>
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+            And more than anything,
+            I want to hold your hand
+            for the rest of my life.
+        </p>
+
+        <br>
+
+        <p>
+            Not just as your girlfriend.
+            Not just as your lover.
+            But as your wife. ❤️
+        </p>
+
+
+        <p class="love-highlight">
+
+            I want to grow old with you,
+            laugh with you,
+            fight with you,
+            make up with you,
+            and keep choosing you
+            every single day.
+
+        </p>
+
+
+        <p>
+
+            If life gets difficult,
+            I want us to face it together.
+
+            If the world feels too much,
+            I want to be the person
+            standing beside you.
+
+        </p>
+
+
+        <p class="love-highlight">
+
+            Your hand in mine.<br>
+
+            Today, tomorrow,<br>
+
+            and for the rest
+            of our lives. ❤️
+
+        </p>
+
+    </div>
+
+
+    <button onclick="nextSection()">
+        One last thing, my love… ❤️
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     8 — FINAL
+===================================================== -->
+
+<section class="final" id="last">
+
+    <div class="main-heart">
+        ❤️
+    </div>
+
+
+    <p class="big">
+        We may not have a perfect
+        love story.
+    </p>
+
+
+    <p class="big">
+        We have fights.<br>
+        Misunderstandings.<br>
+        Laughter.<br>
+        Tears.<br>
+        Craziness.<br>
+        And countless little memories.
+    </p>
+
+
+    <p class="big">
+        But it's
+        <b>OURS.</b>
+    </p>
+
+
+    <p class="big">
+        And if I could go back to 2018
+        and meet you all over again…
+    </p>
+
+
+    <p class="big highlight">
+        <b>
+            I would still choose you. ❤️
+        </b>
+    </p>
+
+
+    <div class="signature">
+
+        Happy Anniversary, Mama 🥹❤️
+
+        <br><br>
+
+        Sorry for everything.<br>
+
+        Thank you for everything.
+
+        <br><br>
+
+        <b>
+            And thank you for being
+            my everything.
+        </b>
+
+        <br><br>
+
+        I love you. ❤️
+
+        <br><br>
+
+        Forever yours,
+
+        <br>
+
+        <b>
+            — Your Haseena 💕
+        </b>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* ================= NEXT SECTION ================= */
+
+function nextSection(){
+
+    const sections =
+        document.querySelectorAll("section");
+
+    const current =
+        Math.round(
+            window.scrollY /
+            window.innerHeight
+        );
+
+    if(
+        current + 1 <
+        sections.length
+    ){
+
+        sections[
+            current + 1
+        ].scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+document
+.querySelectorAll(".hearts")
+.forEach(container => {
+
+    for(
+        let i = 0;
+        i < 18;
+        i++
+    ){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "floating-heart";
+
+        heart.innerHTML =
+            Math.random() > .5
+            ? "❤️"
+            : "💕";
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+        heart.style.fontSize =
+            (12 + Math.random() * 18)
+            + "px";
+
+        heart.style.animationDuration =
+            (6 + Math.random() * 8)
+            + "s";
+
+        heart.style.animationDelay =
+            Math.random() * 7
+            + "s";
+
+        container.appendChild(heart);
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
